@@ -2,36 +2,54 @@
 <html lang="en">
 <head>
     <style>
-    .iframe-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 125%; /* Adjust this value based on the aspect ratio you want (height / width * 100%) */
-}
-    .container {
-        padding: 20px;
-    }
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 125%; /* Adjust this value based on the aspect ratio you want (height / width * 100%) */
+        }
 
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
+        .container {
+            padding: 20px;
+        }
 
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
     <meta charset="UTF-8">
     <title>Home Test</title>
 </head>
 <body>
 <div class="container"><h1>Hello World!</h1>
-<a href="{% url 'signup' %}">Signup!</a>
+        <!-- Signup Button -->
+    <form class="signup-form" action="{% url 'signup' %}" method="get">
+        <button type="submit">Signup</button>
+    </form>
 </div>
 
 <div class="iframe-container">
-    <iframe src="https://ambientweather.net/devices/public/60e9f81201c57b56f180f7a66836c640?embed=true" frameborder="0"></iframe>
+    <iframe src="https://ambientweather.net/devices/public/60e9f81201c57b56f180f7a66836c640?embed=true"
+            frameborder="0"></iframe>
 </div>
 <p>powered by <a target="_blank" href="https://ambientweather.net">Ambient Weather</a></p>
 

@@ -1,6 +1,6 @@
 from django.template.response import TemplateResponse
 from django.shortcuts import render, redirect
-from .forms import SignupForm  # Adjust the import path according to your project structure
+from home.forms import SignupForm  # Adjust the import path according to your project structure
 
 
 def index(request):

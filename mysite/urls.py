@@ -19,6 +19,6 @@ from home.views import index, signup_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
+    path('', index, name='home'),
     path('signup', signup_view, name='signup')
 ]

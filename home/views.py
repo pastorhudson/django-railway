@@ -12,7 +12,7 @@ def signup_view(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('success_url')  # Redirect to a new URL
+            return redirect('home')  # Redirect to a new URL
     else:
         form = SignupForm()
     return render(request, 'home/signup.html', {'form': form})

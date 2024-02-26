@@ -11,4 +11,3 @@ class SignupForm(forms.ModelForm):
     # For example, to use a PasswordInput widget for the password field:
     def __init__(self, *args, **kwargs):
         super(SignupForm, self).__init__(*args, **kwargs)
-        self.fields['password'].widget = forms.PasswordInput()

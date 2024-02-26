@@ -29,11 +29,11 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET')
 is_dev = os.environ.get('DEBUG', False)
 DEBUG = is_dev
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", 'home.marvn.lol', 'django-server-production-b09b.up.railway.app']
 
 # FORM SUBMISSION
 # Comment out the following line and place your railway URL, and your production URL in the array.
-CSRF_TRUSTED_ORIGINS = ["localhost", "128.0.0.1", 'home.marvn.lol', 'django-server-production-b09b.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ["http://localhost", "http://127.0.0.1", 'https://home.marvn.lol', 'https://django-server-production-b09b.up.railway.app']
 
 # Application definition
 
